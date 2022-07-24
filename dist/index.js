@@ -2132,6 +2132,7 @@ const GhostAdminApi = __webpack_require__(639);
             zipPath = themeZip;
 
             // Create a zip
+            await exec.exec(`yarn`, [], {cwd: basePath});
             await exec.exec(`yarn zip`, [], {cwd: basePath});
         }
 
