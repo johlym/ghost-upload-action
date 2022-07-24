@@ -25,6 +25,7 @@ const GhostAdminApi = require('@tryghost/admin-api');
             zipPath = themeZip;
 
             // Create a zip
+            await exec.exec(`yarn`, [], {cwd: basePath});
             await exec.exec(`yarn zip`, [], {cwd: basePath});
         }
 
